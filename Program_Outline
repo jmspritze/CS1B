@@ -1,0 +1,62 @@
+Program Specifications 
+
+Write a simple Hotel Reservation System for a hotel near you. The Hotel Reservation System should have the following functionalities:
+•	View all available rooms
+•	Search for available room type
+•	Search Guest ‘s room
+•	Book a room
+•	Checkout from room
+
+Class Design
+You need to have at least the following classes described below. Feel free to come up with more classes if needed.
+public class HotelRoomMasterApp
+•	This class is the public class containing the main function
+•	The main function should do the following: 
+o	Instantiate a HotelRoomMaster object with hotel name and location of your choice
+o	Invoke HotelRoomMaster’s loadRooms method
+o	Invoke HotelRoomMaster's start method (display the menu and ask for user's choice)
+
+class  HotelRoomMaster  (minimum implementation specified below)
+•	Private data members 
+o	Hotel Name
+o	Hotel Location
+o	RoomList (a linkedlist of Rooms objects)
+•	Constructors 
+o	Default constructor: set instance fields to empty strings and instantiate the RoomLinkedList object
+o	Non-default constructor: taking 2 string parameters for name and location. Do the same as default constructor
+•	Public instance methods:
+•	loadRooms: invoke the RoomsLinkedList init method
+•	start: First check if roomlinkedlist size is 0 (no rooms loaded). If so display a message "Sorry, no vacancy." and return. Otherwise use a do while loop to display a menu and ask for user selection then take appropriate action (view all available rooms (a method of RoomLinkedList object), search for a type of room (a method of RoomLinkedList object), or book a room (a combination of RoomLinkedList object's method to search then Room object's method to purchase), or quit (invoke SaveFile method of RoomLinkedList)
+•	menu: display the menu
+
+class RoomLinkedList
+•	Private data members: a reference to a Room object (head), a String for data file name
+•	Constructor 
+o	Default constructor: set data file to "C:\\Applications\\RoomTicketMaster\\Data\\rooms.txt"
+o	Non-default constructor: take a String as data file name
+•	Public instance methods: 
+o	init: read the data file (instance field) containing rooms in this format: room number ;t available; price. For each room instantiate a room object then call insert to add it to the linked list. You must create a text file containing at least 10 rooms.
+o	insert: take a reference to a Room and add it to the end of linked list
+o	find: take a guest name and return a reference to the found room or null if not found
+o	size: return the number of nodes in the linked list (i.e. the number of rooms). You must traverse the entire list to count the nodes. I know it's not efficient and we can do better but for the sake of learning linked list I want to make sure you know how to traverse it
+o	viewAll: display all rooms. Must use System.out.println ( <a reference to a room object> ) when display the Room object information
+o	SaveFile: write all room nodes in linked list to the data file
+
+class Room
+•	Private data members: room number, available, room price, a reference to a Room (next)
+•	Constructor 
+o	Default constructor (no-op but it must be defined)
+o	Non-default constructor (takes 3 parameters)
+•	Public instance methods: 
+o	accessors and mutators for all instance fields including the reference to the next Room object
+o	bookRoom: take an integer (number of tickets) and see if its available. If not return false. Otherwise compute the total cost and display it. Also deduct the room from Rooms available. 
+o	toString method: to display room information. You must use String.format to nicely format the room information (field width, double precision).
+
+Testing
+•	Run the program to test all functionalities such as 
+o	No rooms loaded (no vacancy)
+o	View all rooms
+o	Search a room at the beginning of the list, in the middle of the list, and at the end of the list
+o	Search a room that is not in the list
+o	Book a room
+
