@@ -5,6 +5,7 @@ public abstract class HotelRoom {
 	protected int roomNumber;
 	protected int roomPrice;
 	protected int numGuests;
+	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
 	
 	abstract void CheckIn();
 	abstract void Checkout();
@@ -15,6 +16,7 @@ public abstract class HotelRoom {
 		this.roomNumber = 0;
 		this.roomPrice = 50;
 		this.numGuests = 0;
+		this.available= false;
 	}
 	
 	//Constructor
@@ -24,18 +26,15 @@ public abstract class HotelRoom {
 		this.numGuests = guests;
 	}
 	
-
+	
+	
 	@Override 
 	public String toString(){
 		return "";
 		// TO DO
 	}
 	
-	 // Casino method
-	public int play() {
-		return 0; // TO DO
-	}
-	
+
 	
 }
 
