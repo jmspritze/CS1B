@@ -201,7 +201,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#String customerName",
+											"text": "+String customerName",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -229,7 +229,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#String CustomerCreditCard",
+											"text": "+String CustomerCreditCard",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -257,7 +257,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#Integer confimationNumber",
+											"text": "+Integer confimationNumber",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -285,7 +285,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#String customerAddress",
+											"text": "+String customerAddress",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -313,7 +313,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#Integer bookingDays",
+											"text": "+Integer bookingDays",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										}
@@ -579,7 +579,7 @@
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
 							"name": "String customerName",
-							"visibility": "protected",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -597,7 +597,7 @@
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
 							"name": "String CustomerCreditCard",
-							"visibility": "protected",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -615,7 +615,7 @@
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
 							"name": "Integer confimationNumber",
-							"visibility": "protected",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -633,7 +633,7 @@
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
 							"name": "String customerAddress",
-							"visibility": "protected",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -651,7 +651,7 @@
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
 							"name": "Integer bookingDays",
-							"visibility": "protected",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
