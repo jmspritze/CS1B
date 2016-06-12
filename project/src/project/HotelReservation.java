@@ -40,8 +40,7 @@ public class HotelReservation {
 	
 	public void RoomCheckIn(){
 		// TO DO
-		// Find next available room in roomList
-		// 
+	
 	}
 	
 	public void RoomCheckout(){
