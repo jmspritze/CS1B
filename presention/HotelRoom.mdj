@@ -179,12 +179,12 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFVRuBsK9J1ACQ=",
+											"_id": "AAAAAAFVRuBcutJvnU4=",
 											"_parent": {
 												"$ref": "AAAAAAFVRt1qlNIrM7o="
 											},
 											"model": {
-												"$ref": "AAAAAAFVRuBsAdJyWCk="
+												"$ref": "AAAAAAFVRuBckdJstgc="
 											},
 											"visible": true,
 											"enabled": true,
@@ -201,18 +201,18 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#Integer roomNumber",
+											"text": "+String customerName",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFVRuHGutKGt5g=",
+											"_id": "AAAAAAFVRuGwstKAXGg=",
 											"_parent": {
 												"$ref": "AAAAAAFVRt1qlNIrM7o="
 											},
 											"model": {
-												"$ref": "AAAAAAFVRuHGkdKD2kk="
+												"$ref": "AAAAAAFVRuGwidJ9gWc="
 											},
 											"visible": true,
 											"enabled": true,
@@ -229,18 +229,18 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#String hotelName",
+											"text": "+String CustomerCreditCard",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFVRv136u89jyc=",
+											"_id": "AAAAAAFVRuK9ZNKQ4jU=",
 											"_parent": {
 												"$ref": "AAAAAAFVRt1qlNIrM7o="
 											},
 											"model": {
-												"$ref": "AAAAAAFVRv13wO86Vh8="
+												"$ref": "AAAAAAFVRuK9OdKNCGs="
 											},
 											"visible": true,
 											"enabled": true,
@@ -257,18 +257,18 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#roomPrice",
+											"text": "+Integer confimationNumber",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFVRv3uMO9Fctk=",
+											"_id": "AAAAAAFVRuLk09KWGyE=",
 											"_parent": {
 												"$ref": "AAAAAAFVRt1qlNIrM7o="
 											},
 											"model": {
-												"$ref": "AAAAAAFVRv3uAu9CvyE="
+												"$ref": "AAAAAAFVRuLkqdKTx0M="
 											},
 											"visible": true,
 											"enabled": true,
@@ -285,7 +285,35 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "#numberOfGuests",
+											"text": "+String customerAddress",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFVRuO539KgrOY=",
+											"_parent": {
+												"$ref": "AAAAAAFVRt1qlNIrM7o="
+											},
+											"model": {
+												"$ref": "AAAAAAFVRuO5sdKd6tg="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 301,
+											"top": 234,
+											"width": 359,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+Integer bookingDays",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										}
@@ -302,7 +330,7 @@
 									"left": 296,
 									"top": 169,
 									"width": 369,
-									"height": 68,
+									"height": 83,
 									"autoResize": false
 								},
 								{
@@ -334,12 +362,12 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 301,
-											"top": 242,
+											"top": 257,
 											"width": 359,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+CheckIn()",
+											"text": "+BookRoom()",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -362,12 +390,12 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 301,
-											"top": 257,
+											"top": 272,
 											"width": 359,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+CheckOut()",
+											"text": "+CheckIn()",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -390,12 +418,12 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 301,
-											"top": 272,
+											"top": 287,
 											"width": 359,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+Extend()",
+											"text": "+CheckOut()",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5
 										},
@@ -418,7 +446,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 301,
-											"top": 287,
+											"top": 302,
 											"width": 359,
 											"height": 13,
 											"autoResize": false,
@@ -438,7 +466,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 296,
-									"top": 237,
+									"top": 252,
 									"width": 369,
 									"height": 68,
 									"autoResize": false
@@ -504,7 +532,7 @@
 							"left": 296,
 							"top": 144,
 							"width": 369,
-							"height": 161,
+							"height": 185,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -546,12 +574,12 @@
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAFVRuBsAdJyWCk=",
+							"_id": "AAAAAAFVRuBckdJstgc=",
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "Integer roomNumber",
-							"visibility": "protected",
+							"name": "String customerName",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -564,12 +592,12 @@
 						},
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAFVRuHGkdKD2kk=",
+							"_id": "AAAAAAFVRuGwidJ9gWc=",
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "String hotelName",
-							"visibility": "protected",
+							"name": "String CustomerCreditCard",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -582,12 +610,12 @@
 						},
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAFVRv13wO86Vh8=",
+							"_id": "AAAAAAFVRuK9OdKNCGs=",
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "roomPrice",
-							"visibility": "protected",
+							"name": "Integer confimationNumber",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -600,12 +628,30 @@
 						},
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAFVRv3uAu9CvyE=",
+							"_id": "AAAAAAFVRuLkqdKTx0M=",
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "numberOfGuests",
-							"visibility": "protected",
+							"name": "String customerAddress",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFVRuO5sdKd6tg=",
+							"_parent": {
+								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
+							},
+							"name": "Integer bookingDays",
+							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
 							"type": "",
@@ -624,7 +670,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "CheckIn",
+							"name": "BookRoom",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -638,7 +684,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "CheckOut",
+							"name": "CheckIn",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -652,7 +698,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFVRt1qk9Ij8cQ="
 							},
-							"name": "Extend",
+							"name": "CheckOut",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
