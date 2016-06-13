@@ -1,30 +1,43 @@
 package project;
 
 
+public class Venitian extends HotelRoom{
 
-public class Venitian extends HotelRoom implements Casino {
+    private Integer numberOfBeds;
+    private String amenities;
+    private String view;
 
-	private String roomName;
-	private String casinoName;
-	private int maxGuestsPerRoom;
-	private int casinoScore;
 	
-	public Venitian() {
-		super();
-		this.roomName = "";
-		this.casinoName = "";
-		this.maxGuestsPerRoom = 5;
-		this.casinoScore = 0;
-	}
+	public Venitian(    String hName,
+		    String hType,
+		    Integer rNumber,
+		    String rTypem,
+		    Integer nBeds,
+		    String amens,
+		    String views,
+		    double rPrice,
+		    String cName,
+		    String cAddress,
+		    String cCreditCard,
+		    Integer cNumber,
+		    Integer bDays,
+		    double cmmisions){
 
-	public Venitian(String rName, String cName, int maxGuests, int cScore, boolean checkIn){
-		super();
-		this.roomName = rName;
-		this.casinoName = cName;
-		this.maxGuestsPerRoom = maxGuests;
-		this.casinoScore = cScore;
-	}
-	
+			    this.setRoomNumber(rNumber);   //setRoomNumber(rNumber);
+			    numberOfBeds = nBeds;
+			    amenities = amens;
+			    view = views;
+			    this.setRoomPrice(rPrice);   
+			    this.setCustomerName(cName);
+			    this.setCustomerAddress(cAddress);
+			    this.setCustomerCreditCard(cCreditCard);
+			    this.setConfirmationNumber(cNumber);
+			    this.setBookingDays(bDays);
+			    this.setCommision(cmmisions);
+				
+			}
+			
+
 	@Override
 	void CheckIn() {
 		// TODO Auto-generated method stub

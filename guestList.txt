@@ -1,0 +1,11 @@
+MGM,casino,111,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+Luxor,casino,222,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+ParisLasVegas,casino,333,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+Venitian,casino,444,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+Bellagio,casino,555,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+BestWestern,standard,100,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+CrownPlaza,standard,200,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+Hilton,standard,300,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+HolidayInn,standard,400,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+Motel6,standard,500,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
+Super8,standard,600,double,2,none,yes,200.00,John Smith, 123 main st, losaltos ca 94040,123456789,1234567,7,20.00
