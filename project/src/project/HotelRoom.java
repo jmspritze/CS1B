@@ -13,7 +13,26 @@ public abstract class HotelRoom {
     private String customerAddress;
     private String customerCreditCard;
     private Integer confirmationNumber;
-    private double commision;
+    public String getHotelName() {
+		return hotelName;
+	}
+	public void setHotelName(String hotelName) {
+		this.hotelName = hotelName;
+	}
+	public String getHotelType() {
+		return hotelType;
+	}
+	public void setHotelType(String hotelType) {
+		this.hotelType = hotelType;
+	}
+	public int getNumGuests() {
+		return numGuests;
+	}
+	public void setNumGuests(int numGuests) {
+		this.numGuests = numGuests;
+	}
+
+	private double commision;
 	
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
 	

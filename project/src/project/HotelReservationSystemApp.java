@@ -6,9 +6,9 @@ public class HotelReservationSystemApp {
 	//HotelReservation hotelReservation = new HotelReservation();
 	//hotelReservation.ReportAllReservations();
 	//hotelReservation.ShowCasinoRooms();
-		HotelRoomDb db = new HotelRoomDb();
+		HotelRoomDbMenu db = new HotelRoomDbMenu();
 		db.readDataBase();
-		db.printDb();
+		db.initMenu();
 
 	
 	}

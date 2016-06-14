@@ -30,7 +30,7 @@ public class HotelRoomDb {
     private String customerName;
     private String customerAddress;
     private String customerCreditCard;
-    private Integer confirmationNumber;
+    private Integer confirmation;
     private Integer bookingDays;
     private double commision;
 
@@ -51,217 +51,71 @@ public class HotelRoomDb {
 
               hotelName = dataIn[0];
               hotelType = dataIn[1]; 
-              roomNumber = Integer.parseInt(dataIn[2]);
-              roomType= dataIn[3];  
-              numberOfBeds = Integer.parseInt(dataIn[4]);
-              amenities= dataIn[5];
-              view = dataIn[6];
-              roomPrice =  Double.parseDouble(dataIn[7]);
-              customerName = dataIn[8];
-              customerAddress = dataIn[9];
-              customerCreditCard = dataIn[10];
-              confirmationNumber = Integer.parseInt(dataIn[11]);
-              bookingDays = Integer.parseInt(dataIn[12]);
+              confirmation = Integer.parseInt(dataIn[2]);
+              roomNumber = Integer.parseInt(dataIn[3]);
+              roomType= dataIn[4];  
+              numberOfBeds = Integer.parseInt(dataIn[5]);
+              amenities= dataIn[6];
+              view = dataIn[7];
+              bookingDays = Integer.parseInt(dataIn[8]);
+              roomPrice =  Double.parseDouble(dataIn[9]);
+              customerName = dataIn[10];
+              customerAddress = dataIn[11];
+              customerCreditCard = dataIn[12];
               commision =  Double.parseDouble(dataIn[13]);
               
               //Determine Type and load TreeMap
               if(hotelType.equals("casino")){ 
-                  switch(hotelName){
-                      case "MGM":
-                	    HotelRoom MGMRoom  = new MGM(hotelName,
-                        hotelType, 
-                        roomNumber,
-                        roomType,
-                        numberOfBeds,
-                        amenities,
-                        view,
-                        roomPrice,
-                        customerName,
-                        customerAddress,
-                        customerCreditCard,
-                        confirmationNumber,
-                        bookingDays,
-                        commision);
-                	    Tmap.put(roomNumber,MGMRoom);
-                	      break;
-                	  case "Luxor":           	    	  
-               		    HotelRoom LuxorRoom = new Luxor(hotelName,
-                                hotelType, 
-                                roomNumber,
-                                roomType,
-                                numberOfBeds,
-                                amenities,
-                                view,
-                                roomPrice,
-                                customerName,
-                                customerAddress,
-                                customerCreditCard,
-                                confirmationNumber,
-                                bookingDays,
-                                commision);
-               		    Tmap.put(roomNumber,LuxorRoom);
-                       	  break;
-                      case "ParisLasVegas":
-               		    HotelRoom ParisLasVegasRoom = new ParisLasVegas(hotelName,
-                                hotelType, 
-                                roomNumber,
-                                roomType,
-                                numberOfBeds,
-                                amenities,
-                                view,
-                                roomPrice,
-                                customerName,
-                                customerAddress,
-                                customerCreditCard,
-                                confirmationNumber,
-                                bookingDays,
-                                commision);
-               		    Tmap.put(roomNumber,ParisLasVegasRoom);
-                    	  break;
-                      case "Venitian":
-               		    HotelRoom VenitianRoom = new Venitian(hotelName,
-                                hotelType, 
-                                roomNumber,
-                                roomType,
-                                numberOfBeds,
-                                amenities,
-                                view,
-                                roomPrice,
-                                customerName,
-                                customerAddress,
-                                customerCreditCard,
-                                confirmationNumber,
-                                bookingDays,
-                                commision);
-               		    Tmap.put(roomNumber,VenitianRoom );
-                          break;
-                      case "Bellagio":
-               		    HotelRoom BellagioRoom = new Bellagio(hotelName,
-                                hotelType, 
-                                roomNumber,
-                                roomType,
-                                numberOfBeds,
-                                amenities,
-                                view,
-                                roomPrice,
-                                customerName,
-                                customerAddress,
-                                customerCreditCard,
-                                confirmationNumber,
-                                bookingDays,
-                                commision);
-               		    Tmap.put(roomNumber,BellagioRoom);
-                          break;  
-                	  }
-              }   
-              
-              if(hotelType.equals("standard")){ 
-            	  switch(hotelName){
-            	      case "BestWestern":
-            		   HotelRoom BestWesternRoom  = new BestWestern(hotelName,
-                               hotelType, 
-                               roomNumber,
-                               roomType,
-                               numberOfBeds,
-                               amenities,
-                               view,
-                               roomPrice,
-                               customerName,
-                               customerAddress,
-                               customerCreditCard,
-                               confirmationNumber,
-                               bookingDays,
-                               commision);
-            		   Tmap.put(roomNumber,BestWesternRoom);
-            		     break;
-            	      case "CrownPlaza":           	    	  
-           		       HotelRoom CrownPlazaRoom = new CrownPlaza(hotelName,
-                               hotelType, 
-                               roomNumber,
-                               roomType,
-                               numberOfBeds,
-                               amenities,
-                               view,
-                               roomPrice,
-                               customerName,
-                               customerAddress,
-                               customerCreditCard,
-                               confirmationNumber,
-                               bookingDays,
-                               commision);
-           		       Tmap.put(roomNumber,CrownPlazaRoom);
-                		  break;
-                	  case "Hilton":
-           		       HotelRoom HiltonRoom = new Hilton(hotelName,
-                               hotelType, 
-                               roomNumber,
-                               roomType,
-                               numberOfBeds,
-                               amenities,
-                               view,
-                               roomPrice,
-                               customerName,
-                               customerAddress,
-                               customerCreditCard,
-                               confirmationNumber,
-                               bookingDays,
-                               commision);
-           		       Tmap.put(roomNumber,HiltonRoom);
-                		  break;
-                	  case "HolidayInn":
-           		       HotelRoom HolidayInnRoom = new HolidayInn(hotelName,
-                               hotelType, 
-                               roomNumber,
-                               roomType,
-                               numberOfBeds,
-                               amenities,
-                               view,
-                               roomPrice,
-                               customerName,
-                               customerAddress,
-                               customerCreditCard,
-                               confirmationNumber,
-                               bookingDays,
-                               commision);
-           		       Tmap.put(roomNumber,HolidayInnRoom );
-                		  break;
-                	  case "Motel6":
-           		       HotelRoom Motel6Room = new Motel6(hotelName,
-                               hotelType, 
-                               roomNumber,
-                               roomType,
-                               numberOfBeds,
-                               amenities,
-                               view,
-                               roomPrice,
-                               customerName,
-                               customerAddress,
-                               customerCreditCard,
-                               confirmationNumber,
-                               bookingDays,
-                               commision);
-           		       Tmap.put(roomNumber,Motel6Room);
-                		  break;
-                	  case "Super8":
-              		       HotelRoom Super8Room = new Super8(hotelName,
-                                   hotelType, 
-                                   roomNumber,
-                                   roomType,
-                                   numberOfBeds,
-                                   amenities,
-                                   view,
-                                   roomPrice,
-                                   customerName,
-                                   customerAddress,
-                                   customerCreditCard,
-                                   confirmationNumber,
-                                   bookingDays,
-                                   commision);
-              		       Tmap.put(roomNumber,Super8Room);
-                   		  break;
-                	  
-            	  }
-          }   
+                 HotelRoom casinoroom  = new CasinoHotel(hotelName,
+                    hotelType, 
+                    roomNumber,
+                    roomType,
+                    numberOfBeds,
+                    amenities,
+                    view,
+                    roomPrice,
+                    customerName,
+                    customerAddress,
+                    customerCreditCard,
+                    confirmation,
+                    bookingDays,
+                    commision);
+                	   Tmap.put(confirmation,casinoroom);
+              }
+              if(hotelType.equals("hotel")){ 
+                  HotelRoom hotelroom  = new Hotel(hotelName,
+                     hotelType, 
+                     roomNumber,
+                     roomType,
+                     numberOfBeds,
+                     amenities,
+                     view,
+                     roomPrice,
+                     customerName,
+                     customerAddress,
+                     customerCreditCard,
+                     confirmation,
+                     bookingDays,
+                     commision);
+            		    Tmap.put(confirmation,hotelroom);
+              }
+               if (hotelType.equals("motel")){
+            	   HotelRoom motelroom  = new Motel(hotelName,
+                     hotelType, 
+                     roomNumber,
+                     roomType,
+                     numberOfBeds,
+                     amenities,
+                     view,
+                     roomPrice,
+                     customerName,
+                     customerAddress,
+                     customerCreditCard,
+                     confirmation,
+                     bookingDays,
+                     commision);
+  		                Tmap.put(confirmation,motelroom);
+               }
                 	
            }
             bufferedReader.close();  
@@ -275,18 +129,5 @@ public class HotelRoomDb {
             System.out.println("Error reading file '"  + dataFileName + "'");                  
         }   
  }
-
-	
-
-void printDb(){
-	for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
-	Integer key = entry.getKey();
-	HotelRoom room = entry.getValue();
-	System.out.println( room.getCustomerName());
-	System.out.println(key);
-	}
-	 
- }
-	
 	
 }

@@ -1,28 +1,30 @@
 package project;
 
-public class Bellagio extends HotelRoom {
-    private Integer numberOfBeds;
-    private String amenities;
-    private String view;
-
-
+public class CasinoHotel extends HotelRoom {
 	
-	Bellagio(
-    String hName,
-    String hType,
-    Integer rNumber,
-    String rTypem,
-    Integer nBeds,
-    String amens,
-    String views,
-    double rPrice,
-    String cName,
-    String cAddress,
-    String cCreditCard,
-    Integer cNumber,
-    Integer bDays,
-    double cmmisions){
+	    private Integer numberOfBeds;
+	    private String amenities;
+	    private String view;
 
+	  //Constructor for DataBase objects
+	
+	CasinoHotel(
+			String hName,
+			String hType,
+			Integer rNumber,
+			String rTypem,
+			Integer nBeds,
+			String amens,
+			String views,
+			double rPrice,
+			String cName,
+			String cAddress,
+			String cCreditCard,
+			Integer cNumber,
+			Integer bDays,
+			double cmmisions){
+	    this.setHotelName(hName);
+	    this.setHotelType(hType);
 	    this.setRoomNumber(rNumber);   //setRoomNumber(rNumber);
 	    numberOfBeds = nBeds;
 	    amenities = amens;
@@ -38,9 +40,10 @@ public class Bellagio extends HotelRoom {
 	}
 	
 
+
 	@Override
 	void CheckIn() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
 	}
 
 	@Override
