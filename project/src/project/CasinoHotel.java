@@ -10,6 +10,7 @@ public class CasinoHotel extends HotelRoom {
 	
 	CasinoHotel(
 	      //too many way too many
+	      //unless you really really like variables
 			String hName,
 			String hType,
 			Integer rNumber,
