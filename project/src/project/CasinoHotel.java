@@ -9,6 +9,7 @@ public class CasinoHotel extends HotelRoom {
 	  //Constructor for DataBase objects
 	
 	CasinoHotel(
+	      //too many
 			String hName,
 			String hType,
 			Integer rNumber,
