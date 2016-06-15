@@ -6,7 +6,7 @@ public class Hotel extends HotelRoom {
     private String amenities;
     private String view;
 
-  //Constructor for DataBase objects
+  //Constructor for DataBase objects something
 
 Hotel(
 String hName,
