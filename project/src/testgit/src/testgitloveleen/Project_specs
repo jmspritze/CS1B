@@ -1,0 +1,9 @@
+We can use tree map with arraylist
+Create hotel room objects and add to arraylist
+And arraylist to Treemap
+This can help simplifying HotelRoomDb and HotelRoomDbMenu classes
+or we can make one class out of these 2 classes
+Interface: As we all discussed, we can make commisionable interface with commision method
+CasinoHotel, Hotel and Motel can be independent classes
+We need to come up with Generic class
+We need to think more methods, as we need 5 good methods in program.
