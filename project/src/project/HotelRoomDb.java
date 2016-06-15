@@ -10,13 +10,13 @@ import java.util.TreeMap;
 /*
  * This class reads in a file containing hotel information and Guest information.
  * The format of the text file is: 
- * <hotelName, hotelType, roomNumber, roomType, numberOfBeds, amenities, view, roomPrice, customerName, customerAddress, 
- * customerCreditCard, confirmationNumber, bookingDays, commission>.  
+ * <hotelName, hotelType,confirmationNumber, roomNumber, roomType, numberOfBeds, amenities, view, bookingDays, roomPrice, customerName, customerAddress, 
+ * customerCreditCard, commission>.  
  */
 
 public class HotelRoomDb {
 
-	private static String dataFileName = "C:\\Users\\T3600\\Documents\\GitHub\\CS1B\\guestList.txt"; 
+	private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
     private String line = null;
     private String[] dataIn= null;
     private String hotelName;

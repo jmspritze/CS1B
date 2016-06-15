@@ -13,6 +13,20 @@ public abstract class HotelRoom {
     private String customerAddress;
     private String customerCreditCard;
     private Integer confirmationNumber;
+    private double commision;
+	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
+	
+
+	//Default Constructor
+	public HotelRoom(){ 
+	}	
+	
+	//Abstract methods
+	abstract void CheckIn();
+	abstract void Checkout();
+	abstract void CancelReservation();
+	
+    //Getters/setters
     public String getHotelName() {
 		return hotelName;
 	}
@@ -30,37 +44,6 @@ public abstract class HotelRoom {
 	}
 	public void setNumGuests(int numGuests) {
 		this.numGuests = numGuests;
-	}
-
-	private double commision;
-	
-	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
-	
-	abstract void CheckIn();
-	abstract void Checkout();
-	abstract void CancelReservation();
-	
-	//Default Constructor
-	public HotelRoom(){ 
-		this.setRoomNumber(0);
-		this.setRoomPrice(50);
-		this.numGuests = 0;
-		this.available= false;
-	}
-	
-	//Constructor
-	public HotelRoom(int number, int price, int guests){
-		this.setRoomNumber(number);
-		this.setRoomPrice(price);
-		this.numGuests = guests;
-	}
-	
-	
-	
-	@Override 
-	public String toString(){
-		return "";
-		// TO DO
 	}
 	
 	public int getRoomNumber() {
@@ -119,13 +102,11 @@ public abstract class HotelRoom {
 		this.commision = commision;
 	}
 
-	public class HotelGuest {
-		private String customerName;
-	    String customerAddress;
-	    String customerCreditCard;
-
+	@Override 
+	public String toString(){
+		return "";
+		// TO DO
 	}
-
 	
 }
 
