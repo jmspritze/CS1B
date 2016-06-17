@@ -3,6 +3,7 @@ package project;
 public abstract class HotelRoom {
 
 	
+<<<<<<< HEAD
 	private String hotelName;
     private String hotelType;
 	private int roomNumber;
@@ -27,6 +28,19 @@ public abstract class HotelRoom {
 	abstract void CancelReservation();
 	
     //Getters/setters
+=======
+	protected String hotelName;
+    protected String hotelType;
+	protected int roomNumber;
+    protected Integer bookingDays;
+	protected double roomPrice;
+	protected int numGuests;
+    protected String customerName;
+    protected String customerAddress;
+    protected String customerCreditCard;
+    protected Integer confirmationNumber;
+    
+>>>>>>> c5612dfdf58287d0dbb35a5fe513945bdfa717e1
     public String getHotelName() {
 		return hotelName;
 	}

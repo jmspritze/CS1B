@@ -16,7 +16,11 @@ import java.util.TreeMap;
 
 public class HotelRoomDb {
 
+<<<<<<< HEAD
 	private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
+=======
+	private static String dataFileName = "//Users//antoinevo//Desktop//guestList.txt"; 
+>>>>>>> c5612dfdf58287d0dbb35a5fe513945bdfa717e1
     private String line = null;
     private String[] dataIn= null;
     private String hotelName;
@@ -42,7 +46,6 @@ public class HotelRoomDb {
  void readDataBase(){
 
         try{
-          //Try catch to get data from file
             FileReader fileReader =  new FileReader(dataFileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
