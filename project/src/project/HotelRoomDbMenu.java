@@ -48,8 +48,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			    case 3 : printMotelGuest();
 			        break;
 			        
-			    case 4: makeReservation();
-			    	break;
+			//    case 4: makeReservation();
+			  //  	break;
 			    	
 			    case 5: cancelReservation();
 			    	break;
@@ -92,7 +92,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	
 
 	// Creates and returns a reservation
-	// INCOMPLETE METHOD vvvv What do we want to do with the reservation we create? read it into a file?
+	/*INCOMPLETE METHOD vvvv What do we want to do with the reservation we create? read it into a file?
 	HotelReservation makeReservation(){ 
 		BufferedReader br = null;
 		Random rand = new Random();
@@ -118,7 +118,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		
 		return Reservation;
 
-	};
+	};*/
 	
 	
 	void cancelReservation(){

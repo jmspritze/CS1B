@@ -15,12 +15,8 @@ import java.util.TreeMap;
  */
 
 public class HotelRoomDb {
-
-<<<<<<< HEAD
 	private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
-=======
-	private static String dataFileName = "//Users//antoinevo//Desktop//guestList.txt"; 
->>>>>>> c5612dfdf58287d0dbb35a5fe513945bdfa717e1
+	//private static String dataFileName = "//Users//antoinevo//Desktop//guestList.txt"; 
     private String line = null;
     private String[] dataIn= null;
     private String hotelName;
@@ -102,23 +98,6 @@ public class HotelRoomDb {
                      commision);
             		    Tmap.put(confirmation,hotelroom);
               }
-               if (hotelType.equals("motel")){
-            	   HotelRoom motelroom  = new Motel(hotelName,
-                     hotelType, 
-                     roomNumber,
-                     roomType,
-                     numberOfBeds,
-                     amenities,
-                     view,
-                     roomPrice,
-                     customerName,
-                     customerAddress,
-                     customerCreditCard,
-                     confirmation,
-                     bookingDays,
-                     commision);
-  		                Tmap.put(confirmation,motelroom);
-               }
                 	
            }
             bufferedReader.close();  

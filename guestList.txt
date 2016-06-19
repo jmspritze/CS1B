@@ -1,11 +1,11 @@
-MGM,casino,1,111,double,2,none,yes,7,200.00,John MGM,123 main st,losaltos ca 94040,12345,20.00
-Luxor,casino,12,222,double,2,none,yes,7,200.00,John Luxor,123 main st,losaltos ca 94040,1234,20.00
-ParisLasVegas,casino,123,333,double,2,none,yes,7,200.00,John Paris,123 main st,losaltos ca 94040,1234,20.00
-Venitian,casino,1234,444,double,2,none,yes,7,200.00,John Veni,123 main st,losaltos ca 94040,12345,20.00
-Bellagio,casino,12345,555,double,2,none,yes,7,200.00,John Bella,123 main st,losaltos ca 94040,1234,20.00
-BestWestern,hotel,123456,100,double,2,none,yes,7,200.00,John Best,123 main st,losaltos ca 94040,1234,20.00
-CrownPlaza,hotel,123457,200,double,2,none,yes,7,200.00,John Crown,123 main st,losaltos ca 94040,1234,20.00
-Hilton,hotel,123458,300,double,2,none,yes,7,200.00,John Hilton,123 main st,losaltos ca 94040,1234,20.00
-HolidayInn,hotel,123459,400,double,2,none,yes,7,200.00,John Holidy,123 main st,losaltos ca 94040,1234,20.00
-Motel6,motel,1234510,500,double,2,none,yes,7,200.00,John Six,123 main st,losaltosca94040,12345,20.00
-Super8,motel,1234511,600,double,2,none,yes,7,200.00,John Super,123 main st,losaltosca94040,12345,20.00
+MGM,casino,78923,111,double,2,none,yes,7,200.00,John MGM,123 main st,losaltos ca 94040,12345,20.00
+Luxor,casino,65790,222,double,2,none,yes,7,200.00,John Luxor,123 main st,losaltos ca 94040,1234,20.00
+ParisLasVegas,casino,12428,333,double,2,none,yes,7,200.00,John Paris,123 main st,losaltos ca 94040,1234,20.00
+Venitian,casino,1234,52444,double,2,none,yes,7,200.00,John Veni,123 main st,losaltos ca 94040,12345,20.00
+Bellagio,casino,12345,57595,double,2,none,yes,7,200.00,John Bella,123 main st,losaltos ca 94040,1234,20.00
+BestWestern,hotel,13746,100,double,2,none,yes,7,200.00,John Best,123 main st,losaltos ca 94040,1234,20.00
+CrownPlaza,hotel,24657,200,double,2,none,yes,7,200.00,John Crown,123 main st,losaltos ca 94040,1234,20.00
+Hilton,hotel,71238,300,double,2,none,yes,7,200.00,John Hilton,123 main st,losaltos ca 94040,1234,20.00
+HolidayInn,hotel,34459,400,double,2,none,yes,7,200.00,John Holidy,123 main st,losaltos ca 94040,1234,20.00
+Motel6,motel,24510,500,double,2,none,yes,7,200.00,John Six,123 main st,losaltosca94040,12345,20.00
+Super8,motel,12711,600,double,2,none,yes,7,200.00,John Super,123 main st,losaltosca94040,12345,20.00

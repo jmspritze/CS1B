@@ -1,19 +1,16 @@
 package project;
 
 public abstract class HotelRoom {
-
-	
-<<<<<<< HEAD
-	private String hotelName;
-    private String hotelType;
-	private int roomNumber;
-    private Integer bookingDays;
-	private double roomPrice;
-	private int numGuests;
-    private String customerName;
-    private String customerAddress;
-    private String customerCreditCard;
-    private Integer confirmationNumber;
+	protected String hotelName;
+    protected String hotelType;
+	protected int roomNumber;
+    protected Integer bookingDays;
+	protected double roomPrice;
+	protected int numGuests;
+    protected String customerName;
+    protected String customerAddress;
+    protected String customerCreditCard;
+    protected Integer confirmationNumber;
     private double commision;
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
 	
@@ -28,19 +25,8 @@ public abstract class HotelRoom {
 	abstract void CancelReservation();
 	
     //Getters/setters
-=======
-	protected String hotelName;
-    protected String hotelType;
-	protected int roomNumber;
-    protected Integer bookingDays;
-	protected double roomPrice;
-	protected int numGuests;
-    protected String customerName;
-    protected String customerAddress;
-    protected String customerCreditCard;
-    protected Integer confirmationNumber;
+
     
->>>>>>> c5612dfdf58287d0dbb35a5fe513945bdfa717e1
     public String getHotelName() {
 		return hotelName;
 	}
