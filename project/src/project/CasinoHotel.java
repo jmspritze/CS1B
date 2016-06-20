@@ -5,13 +5,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class CasinoHotel extends HotelRoom {
+/*public class CasinoHotel extends HotelRoom {
 
 	private double roomPrice;
     private String RoomType;;
     private String amenities;
-    private String view;
+    private String view;*/
 
+public class CasinoHotel extends HotelRoom implements CommissionAble{
+	
+	private double roomPrice;
+    private String RoomType;;
+    private String amenities;
+    private String view;	    
 	  //Constructor for DataBase objects
 	CasinoHotel(){}
 
@@ -84,4 +90,12 @@ public class CasinoHotel extends HotelRoom {
 		// TODO Auto-generated method stub	
 	}
 
-}
+	@Override
+	public double commission() {
+		double result = Math.round((getRoomPrice()*getBookingDays()*getCommision())* 100.00) / 100.00; // rounds to hundredth
+		System.out.println("Earned $ " + result + " from " + getHotelName());	
+		return result;
+	}
+	
+	}
+

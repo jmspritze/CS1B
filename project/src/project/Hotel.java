@@ -1,17 +1,23 @@
 package project;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class Hotel extends HotelRoom {
+public class Hotel extends HotelRoom implements CommissionAble {
 	
 	private double roomPrice;
     private String RoomType;;
     private String amenities;
+<<<<<<< HEAD
     private String view = "no";
 
+=======
+    private String view;
+    
+>>>>>>> 67be57fdc8d74e65577b63158397b3396e6fa5d8
   //Constructor for DataBase objects something
 Hotel(){}
 
@@ -76,6 +82,14 @@ void Checkout() {
 @Override
 void CancelReservation() {
 	// TODO Auto-generated method stub	
+}
+
+
+@Override
+public double commission() {
+	double result = Math.round((getRoomPrice()*getBookingDays()*getCommision())* 100.00) / 100.00; // rounds to hundredth
+	System.out.println("Earned $ " + result + " from " + getHotelName());	
+	return result;
 }
 
 }
