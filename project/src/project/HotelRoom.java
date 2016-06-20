@@ -13,6 +13,7 @@ public abstract class HotelRoom {
     protected Long customerCreditCard;
     protected Integer confirmationNumber;
     private double commision;
+    private double finalBill; 
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
 	protected String amenities = "no"; //default
 	protected String view = "no"; //default
@@ -123,6 +124,14 @@ public abstract class HotelRoom {
 	public double commission() {
 		System.out.println("$ 0.00");
 		return 0.0;
+	}
+
+	public double getFinalBill() {
+		return finalBill;
+	}
+
+	public void setFinalBill(double finalBill) {
+		this.finalBill = finalBill;
 	}
 
 		
