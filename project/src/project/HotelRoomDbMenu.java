@@ -22,9 +22,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			   System.out.println("1. Guest CheckIn");
 			   System.out.println("2. Guest Check Out");
 			   System.out.println("3. View Guest Listings");
-			   System.out.println("4. View Total Booking Revenue");
-			   System.out.println("5. View Total Commissions");
-			   System.out.println("6. Quit ");
+			   System.out.println("4. View Total Commissions and Revenue");
+			   System.out.println("5. Quit ");
 			    BufferedReader br = null;
 			    String data = null;
 
@@ -48,15 +47,13 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 			    case 3 : printGuestInfo();
 			        break;
-			        
-			    case 4: totalBookingRevenue();
-			     	break;
+
 			    	
-			    case 5: totalCommissions();
+			    case 4: totalCommissions();
 			    	break;
 			    	
-			    	
-			    case 6 : quit();
+			   
+			    case 5 : quit();
 			    	break;
 
 			} 
@@ -70,10 +67,6 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		
 	}
 
-	private void totalBookingRevenue() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	private void guestCheckOut() {
 		// TODO Auto-generated method stub
@@ -376,6 +369,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	
 	void quit(){
 		System.out.println("Goodbye!");
+		System.exit(0);
 	}
 
 }
