@@ -15,8 +15,8 @@ public abstract class HotelRoom {
     protected Integer confirmationNumber;
     private double commision;
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
-	protected String amenities;
-	protected String view;
+	protected String amenities = "no"; //default
+	protected String view = "no"; //default
 	
 
 

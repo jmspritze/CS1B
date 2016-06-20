@@ -17,8 +17,8 @@ import java.util.TreeMap;
  */
 
 public class HotelRoomDb {
-	private static String dataFileName = "C:\\Users\\T3600\\Documents\\Github\\CS1B\\guestList.txt";
-	//private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
+	//private static String dataFileName = "C:\\Users\\T3600\\Documents\\Github\\CS1B\\guestList.txt";
+	private static String dataFileName = "C:\\Users\\John\\Documents\\Github\\CS1B\\guestList.txt"; 
 	//private static String dataFileName = "//Users//antoinevo//Desktop//guestList.txt"; 
     private String line = null;
     private String[] dataIn= null;
@@ -26,7 +26,6 @@ public class HotelRoomDb {
     private String hotelType;
     private Integer roomNumber;
     private String roomType;
-    private Integer numberOfBeds;
     private String amenities;
     private String view;
     private double roomPrice;
@@ -55,15 +54,15 @@ public class HotelRoomDb {
               confirmation = Integer.parseInt(dataIn[2]);
               roomNumber = Integer.parseInt(dataIn[3]);
               roomType= dataIn[4];  
-              numberOfBeds = Integer.parseInt(dataIn[5]);
+              bookingDays = Integer.parseInt(dataIn[5]);
               amenities= dataIn[6];
               view = dataIn[7];
-              bookingDays = Integer.parseInt(dataIn[8]);
-              roomPrice =  Double.parseDouble(dataIn[9]);
-              customerName = dataIn[10];
-              customerAddress = dataIn[11];
-              customerCreditCard = Long.parseLong(dataIn[12]);
-              commision =  Double.parseDouble(dataIn[13]);
+              roomPrice =  Double.parseDouble(dataIn[8]);
+              customerName = dataIn[9];
+              customerAddress = dataIn[10];
+              customerCreditCard = Long.parseLong(dataIn[11]);
+              commision =  Double.parseDouble(dataIn[12]); 
+            
               
               //Determine Type and load TreeMap
               if(hotelType.equals("casino")){ 
@@ -72,7 +71,6 @@ public class HotelRoomDb {
                      casinoroom.setHotelType(hotelType);
                      casinoroom.setRoomNumber(roomNumber);
                      casinoroom.setRoomType(roomType);
-                     casinoroom.setNumberOfBeds(numberOfBeds);
                      casinoroom.setRoomPrice(roomPrice);
                      casinoroom.setCustomerName(customerName);
                      casinoroom.setCustomerAddress(customerAddress);
@@ -88,7 +86,6 @@ public class HotelRoomDb {
                       hotelroom.setHotelType(hotelType);
                       hotelroom.setRoomNumber(roomNumber);
                       hotelroom.setRoomType(roomType);
-                      hotelroom.setNumberOfBeds(numberOfBeds);
                       hotelroom.setRoomPrice(roomPrice);
                       hotelroom.setCustomerName(customerName);
                       hotelroom.setCustomerAddress(customerAddress);
@@ -105,7 +102,6 @@ public class HotelRoomDb {
                     motelroom.setHotelType(hotelType);
                     motelroom.setRoomNumber(roomNumber);
                     motelroom.setRoomType(roomType);
-                    motelroom.setNumberOfBeds(numberOfBeds);
                     motelroom.setRoomPrice(roomPrice);
                     motelroom.setCustomerName(customerName);
                     motelroom.setCustomerAddress(customerAddress);
@@ -135,7 +131,7 @@ void writeDataBase(){
 	    for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
 		    HotelRoom room = entry.getValue();
 		    entry.getValue();
-		fileWrite.write(room.hotelName +"~"+ room.hotelType +"~"+ room.confirmationNumber +"~"+ room.roomNumber +"~"+ room.roomType +"~"+ room.bookingDays +"~"+ room.amenities +"~"+ room.view + "~" + (double)room.roomPrice + "~" + room.customerName + "~" + room.customerAddress + "~" + room.customerCreditCard  + "\r\n");
+		fileWrite.write(room.hotelName +"~"+ room.hotelType +"~"+ room.confirmationNumber +"~"+ room.roomNumber +"~"+ room.roomType +"~"+ room.bookingDays +"~"+ room.amenities +"~"+ room.view + "~" + (double)room.roomPrice + "~" + room.customerName + "~" + room.customerAddress + "~" + room.customerCreditCard  + room.getCommision() + "\r\n");
 		}
 	bufferedWriter.close();
    }
@@ -145,6 +141,6 @@ void writeDataBase(){
 	catch(IOException ex){
 		System.out.println("Error writing file.");
 	}
-	}
-}
+	} 
+} 
 

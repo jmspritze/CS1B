@@ -19,7 +19,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			   System.out.println("Welcome to the CS1B Hotel Reservation System");
 			   System.out.println("Choose an item from the menu:");
 			   System.out.println();
-			   System.out.println("1. Guest CheckIn");
+			   System.out.println("1. Guest Check In");
 			   System.out.println("2. Guest Check Out");
 			   System.out.println("3. View Guest Listings");
 			   System.out.println("4. View Total Commissions and Revenue");
