@@ -62,8 +62,19 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 	}
 	
+	
 	private void totalCommissions() {
-		// TODO Auto-generated method stub
+		int revenue = 0;
+		String title = "Commissions";
+		System.out.format("%50s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------------------------");
+		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
+			HotelRoom room = entry.getValue();
+			if(room.getHotelType().equals("hotel") || room.getHotelType().equals("casino"))
+				System.out.println("working"); // test
+				revenue += room.commission();
+		}
+		
 		
 	}
 
@@ -356,7 +367,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		String title = "All Guests";
 		System.out.format("%50s\n",title);
 		System.out.println("------------------------------------------------------------------------------------------------------------");
-		System.out.println("Accomidationd" + "\t\t" + "Guest Name" + "\t\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
+		System.out.println("Accomidation" + "\t\t" + "Guest Name" + "\t\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
 		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
 		HotelRoom room = entry.getValue();

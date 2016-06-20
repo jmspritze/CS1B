@@ -128,6 +128,10 @@ public abstract class HotelRoom {
 		// TO DO
 	}
 
+	public double commission() {
+		return 0.0;
+	}
+
 		
 	
 	
