@@ -8,7 +8,8 @@ import java.util.Random;
 
 public class HotelRoomDbMenu extends HotelRoomDb {
 	
-	
+    HotelRoom roomCheckIn = new HotelReservation();
+    
 	public void initMenu(){
 			int menuNumber = 0;
 
@@ -39,19 +40,19 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 		    switch(menuNumber){
 
-			    case 1 : printGuestInfo();
+			    case 1 : guestCheckIn();
 			        break;
 
-			    case 2 : printCasinoGuest();
+			    case 2 : guestCheckOut();
 			        break;
 
-			    case 3 : printMotelGuest();
+			    case 3 : printGuestInfo();
 			        break;
 			        
-			//    case 4: makeReservation();
-			  //  	break;
+			    case 4: totalBookingRevenue();
+			     	break;
 			    	
-			    case 5: cancelReservation();
+			    case 5: totalCommissions();
 			    	break;
 			    	
 			    	
@@ -64,6 +65,225 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 	}
 	
+	private void totalCommissions() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void totalBookingRevenue() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void guestCheckOut() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void guestCheckIn() {
+
+		   pickHotelType();
+		   System.out.println();
+		   pickRoomType();
+
+		// Creates entry in guestlist.txt
+			BufferedReader br = null;
+			Random rand = new Random();
+
+			try {   
+				      br = new BufferedReader (new InputStreamReader (System.in));
+					  System.out.println("Please enter the guest's name: ");
+					  roomCheckIn.setCustomerName(br.readLine());
+					  System.out.println("Please enter the guest's address: ");
+					  roomCheckIn.setCustomerAddress(br.readLine());
+				      System.out.println("How many days will the guest be staying?");
+				      roomCheckIn.setBookingDays(Integer.parseInt(br.readLine()));
+				      System.out.println("Please enter the guests creditcard number");
+				      roomCheckIn.setCustomerCreditCard(Long.parseLong(br.readLine()));
+				      int generatedConfirmationNumber =  rand.nextInt(89999)+10000; // generate random int from 10000-99999
+				      roomCheckIn.setConfirmationNumber(generatedConfirmationNumber);
+				      System.out.println("Check in complete. The guest's confirmation number is: " + generatedConfirmationNumber);
+				    	  
+			      }  
+			catch ( IOException e)  {
+				  e.printStackTrace ();
+				  }
+			
+			Tmap.put(roomCheckIn.getConfirmationNumber(),roomCheckIn);
+			writeDataBase();
+		}
+		
+
+	private void pickRoomType() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void pickHotelType() {
+		int menuNumber2 = 0;
+		   System.out.println("Choose where to stay:");
+		   System.out.println();
+		   System.out.println("1. View Hotel Listings");
+		   System.out.println("2. View Casino Listings");
+		   System.out.println("3. View Motel Listings");
+	
+		try {   
+		      BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+		      System.out.println("Enter You Choice:");
+		      String data = br.readLine ( );
+		      menuNumber2 = Integer.parseInt (data);
+		      }  
+		catch ( IOException e)  {
+		  e.printStackTrace ();
+		  } 
+
+	    switch(menuNumber2){
+
+		    case 1 : printHotel();
+		        break;
+
+		    case 2 : printCasino();
+		        break;
+
+		    case 3 : printMotel();
+		        break;       
+	    }
+		 
+	 }
+	
+
+
+	private void printMotel() {
+		int menuNumber = 0;
+		   System.out.println("The available Motels are:");
+		   System.out.println("1. Motel 6");
+		   System.out.println("2. Super 8");
+		   System.out.println("Please select a number:");
+		   System.out.println();
+			try {   
+			      BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+			      String data = br.readLine ( );
+			      menuNumber = Integer.parseInt (data);
+			      }  
+			catch ( IOException e)  {
+			  e.printStackTrace ();
+			  } 
+		    switch(menuNumber){
+
+		    case 1 : 
+		    	roomCheckIn.setHotelType("motel");
+		    	roomCheckIn.setHotelName("Motel 6");
+		        break;
+
+		    case 2 : 
+		    	roomCheckIn.setHotelType("motel");
+		    	roomCheckIn.setHotelName("Motel 8");
+		        break;
+   
+	    }
+	}
+
+	private void printCasino() {
+		int menuNumber = 0;
+		   System.out.println("The available Casinos are:");
+		   System.out.println("1. MGM Casino");
+		   System.out.println("2. Luxor Casino");
+		   System.out.println("3. Paris Las Vegas");
+		   System.out.println("4. Venitian");
+		   System.out.println("5. Bellagio");
+		   System.out.println("Please select a number.");
+		   System.out.println();
+			try {   
+			      BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+			      System.out.println("Enter You Choice:");
+			      String data = br.readLine ( );
+			      menuNumber = Integer.parseInt (data);
+			      }  
+			catch ( IOException e)  {
+			  e.printStackTrace ();
+			  } 
+		    switch(menuNumber){
+
+		    case 1 :
+		    	 System.out.println("You pciked MGM Casino");
+		    	roomCheckIn.setHotelType("casino");
+		    	roomCheckIn.setHotelName("MGM Casino");
+		        break;
+
+		    case 2 : 		
+		    	System.out.println("You picked Luxor Casino");
+		    	roomCheckIn.setHotelType("casino");
+	    	    roomCheckIn.setHotelName("Luxor Casino");
+		        break;
+
+		    case 3 : 
+		    	System.out.println("You picked Paris Las Vegas");
+		    	roomCheckIn.setHotelType("casino");
+		    	roomCheckIn.setHotelName("ParisLasVegas");
+		        break;
+		        
+		    case 4: 
+		    	System.out.println("You picked Venitian");
+		    	roomCheckIn.setHotelType("casino");
+		    	roomCheckIn.setHotelName("Venitian");
+	        break;
+	        
+		    case 5:
+		    	System.out.println("You picked Bellagio");
+		    	roomCheckIn.setHotelType("casino");
+		    	roomCheckIn.setHotelName("Bellagio");
+	        break;	  
+	    }
+		
+	}
+
+	private void printHotel() {
+		int menuNumber = 0;
+		   System.out.println("The available hotels are:");
+		   System.out.println("1. Best Western");
+		   System.out.println("2. Crown Plaza");
+		   System.out.println("3. Hilton Inn");
+		   System.out.println("4. HolidayInn");
+		   System.out.println("Please select a number.");
+		   System.out.println();
+			try {   
+			      BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+			      System.out.println("Enter You Choice:");
+			      String data = br.readLine ( );
+			      menuNumber = Integer.parseInt (data);
+			      }  
+			catch ( IOException e)  {
+			  e.printStackTrace ();
+			  } 
+		    switch(menuNumber){
+
+		    case 1 : 
+		    	System.out.println("You picked Best Western");
+		    	roomCheckIn.setHotelType("hotel");
+		    	roomCheckIn.setHotelName("BestWestern");
+		        break;
+
+		    case 2 : 
+		    	System.out.println("You picked Crown Plaza");
+		    	roomCheckIn.setHotelType("hotel");
+		    	roomCheckIn.setHotelName("CrownPlaza");
+		        break;
+
+		    case 3 : 
+		    	System.out.println("You picked Hilton Inn");
+		    	roomCheckIn.setHotelType("hotel");
+		    	roomCheckIn.setHotelName("HiltonInns");
+		        break;
+		        
+		    case 4: 
+		    	 System.out.println("You picked HolidayInn");
+		    	roomCheckIn.setHotelType("hotel");
+		    	roomCheckIn.setHotelName("HolidayInn");
+	        break;
+		    }
+		
+	}
+
 	void printGuestInfo(){
 		int menuNumber2 = 0;
 		   System.out.println("Choose Guest List to view:");
@@ -102,8 +322,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	
 	void printHotelGuest(){
 		String title = "Hotel Guests";
-		System.out.format("%40s\n",title);
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.format("%50s\n",title);
+		System.out.println("-----------------------------------------------------------------------------------------------------------");
 		System.out.println("Hotel" + "\t\t" + "Guest Name" + "\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
 		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
@@ -115,8 +335,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	 }
 	void printCasinoGuest(){
 		String title = "Casino Guests";
-		System.out.format("%40s\n",title);
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.format("%50s\n",title);
+		System.out.println("-----------------------------------------------------------------------------------------------------------");
 		System.out.println("Casino" + "\t\t" + "Guest Name" + "\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
 		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
@@ -128,8 +348,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	 }
 	void printMotelGuest(){
 		String title = "Motel Guests";
-		System.out.format("%40s\n",title);
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.format("%50s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------------------------");
 		System.out.println("Motel" + "\t\t" + "Guest Name" + "\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
 		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
@@ -141,8 +361,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	
 	void printAllGuest(){
 		String title = "All Guests";
-		System.out.format("%40s\n",title);
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.format("%50s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------------------------");
 		System.out.println("Accomidationd" + "\t\t" + "Guest Name" + "\t\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
 		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
@@ -152,40 +372,6 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		}	 
 	 }
 	
-
-	// Creates and returns a reservation
-	/*INCOMPLETE METHOD vvvv What do we want to do with the reservation we create? read it into a file?
-	HotelReservation makeReservation(){ 
-		BufferedReader br = null;
-		Random rand = new Random();
-	    HotelReservation Reservation = new HotelReservation();
-		try {   
-			      br = new BufferedReader (new InputStreamReader (System.in));
-				  System.out.println("Name?");
-			      Reservation.setCustomerName(br.readLine());
-				  System.out.println("Address?");
-			      Reservation.setCustomerAddress(br.readLine());
-			      System.out.println("How many days do you plan on staying?");
-			      Reservation.setBookingDays(Integer.parseInt(br.readLine()));
-			      System.out.println("Please enter Credit Card Number");
-			      Reservation.setCreditCardNumber(Integer.parseInt(br.readLine()));
-			      int generatedConfirmationNumber =  rand.nextInt(89999)+10000; // generate random int from 10000-99999
-			      Reservation.setConfirmationNumber(generatedConfirmationNumber);
-			      System.out.println("Reservation Created. Your confirmation number is: " + generatedConfirmationNumber);
-			    	  
-		      }  
-		catch ( IOException e)  {
-			  e.printStackTrace ();
-			  }
-		
-		return Reservation;
-
-	};*/
-	
-	
-	void cancelReservation(){
-	
-	};
 	
 	
 	void quit(){

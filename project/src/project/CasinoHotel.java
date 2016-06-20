@@ -7,41 +7,7 @@ public class CasinoHotel extends HotelRoom {
 	    private String view;
 
 	  //Constructor for DataBase objects
-	
-	CasinoHotel(
-	      //too many way too many
-	      //unless you really really like variables
-			String hName,
-			String hType,
-			Integer rNumber,
-			String rTypem,
-			Integer nBeds,
-			String amens,
-			String views,
-			double rPrice,
-			String cName,
-			String cAddress,
-			String cCreditCard,
-			Integer cNumber,
-			Integer bDays,
-			double cmmisions){
-	    this.setHotelName(hName);
-	    this.setHotelType(hType);
-	    this.setRoomNumber(rNumber);   //setRoomNumber(rNumber);
-	    numberOfBeds = nBeds;
-	    amenities = amens;
-	    view = views;
-	    this.setRoomPrice(rPrice);   
-	    this.setCustomerName(cName);
-	    this.setCustomerAddress(cAddress);
-	    this.setCustomerCreditCard(cCreditCard);
-	    this.setConfirmationNumber(cNumber);
-	    this.setBookingDays(bDays);
-	    this.setCommision(cmmisions);
-		
-	}
-	
-
+	CasinoHotel(){}
 
 	@Override
 	void CheckIn() {

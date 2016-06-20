@@ -1,73 +1,29 @@
 package project;
 
-import java.util.ArrayList;
+public class HotelReservation extends HotelRoom{
+	private static String dataFileName = "C:\\Users\\T3600\\Documents\\Github\\CS1B\\guestList.txt";
+	//private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
+	//private static String dataFileName = "//Users//antoinevo//Desktop//guestList.txt"; 
 
-public class HotelReservation {
-	private String customerName;
-	private String customerAddress;
-	private int creditCardNumber;
-	private int bookingDays;
-	private int confirmationNumber;
-	private ArrayList<HotelRoom> roomList;
-	
-	
-	//Default Constructor
-	public HotelReservation(){
-		this.customerName = "";
-		this.customerAddress = "";
-		this.creditCardNumber = 0;
-		this.bookingDays = 0;
-		this.confirmationNumber = 0;
-	}
-
-	//regular Constructor
-	public HotelReservation(String name, String address, int cardNumber, int bookingDays, int confirmNum){
-		this.customerName = name;
-		this.customerAddress = address;
-		this.creditCardNumber = cardNumber;
-		this.bookingDays = bookingDays;
-		this.confirmationNumber = confirmNum;
-	}
-	
-	
-	public void ReadRoomList(){
-		// TO DO
-	}
-	
-	public void HotelReservationList(){
-	// TO DO
-	}
-	
-	public void RoomCheckIn(){
-		// TO DO
-	
-	}
-	
-	public void RoomCheckout(){
-		// TO DO
-	}
-	
-	public void ExtendStay(){
-	   // TO DO	
-	}
-	
-	public void CancelRoomReservation(){
-		// TO DO
-	}
-	
-	public void SaveRoomReservation(){
-		
-	}
-
-	public void ShowCasinoRooms() {
+	@Override
+	void CheckIn() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void ReportAllReservations() {
+	@Override
+	void Checkout() {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	void CancelReservation() {
+		// TODO Auto-generated method stub
+		
+	}
+   
+	
 	
 }
 

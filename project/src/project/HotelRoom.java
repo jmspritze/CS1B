@@ -3,17 +3,22 @@ package project;
 public abstract class HotelRoom {
 	protected String hotelName;
     protected String hotelType;
+    protected String roomType;
 	protected int roomNumber;
+	protected int numberOfBeds;
     protected Integer bookingDays;
 	protected double roomPrice;
 	protected int numGuests;
-    protected String customerName;
+	protected String customerName;
     protected String customerAddress;
-    protected String customerCreditCard;
+    protected Long customerCreditCard;
     protected Integer confirmationNumber;
     private double commision;
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
+	protected String amenities;
+	protected String view;
 	
+
 
 	//Default Constructor
 	public HotelRoom(){ 
@@ -25,8 +30,23 @@ public abstract class HotelRoom {
 	abstract void CancelReservation();
 	
     //Getters/setters
+	
+    public String getRoomType() {
+		return roomType;
+	}
 
-    
+	public void setRoomType(String roomType) {
+		this.roomType = roomType;
+	}
+
+	
+	public Integer getNumberofBeds(){
+		return numberOfBeds;
+	}
+
+    public void setNumberOfBeds(Integer numOfBeds){
+    	this.numberOfBeds = numOfBeds;
+    }
     public String getHotelName() {
 		return hotelName;
 	}
@@ -74,10 +94,10 @@ public abstract class HotelRoom {
 		this.customerAddress = customerAddress;
 	}
 
-	public String getCustomerCreditCard() {
+	public Long getCustomerCreditCard() {
 		return customerCreditCard;
 	}
-	public void setCustomerCreditCard(String customerCreditCard) {
+	public void setCustomerCreditCard(Long customerCreditCard ) {
 		this.customerCreditCard = customerCreditCard;
 	}
 
@@ -107,6 +127,9 @@ public abstract class HotelRoom {
 		return "";
 		// TO DO
 	}
+
+		
+	
 	
 }
 
