@@ -131,7 +131,7 @@ void writeDataBase(){
 	    for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
 		    HotelRoom room = entry.getValue();
 		    entry.getValue();
-		fileWrite.write(room.hotelName +"~"+ room.hotelType +"~"+ room.confirmationNumber +"~"+ room.roomNumber +"~"+ room.roomType +"~"+ room.bookingDays +"~"+ room.amenities +"~"+ room.view + "~" + (double)room.roomPrice + "~" + room.customerName + "~" + room.customerAddress + "~" + room.customerCreditCard  + room.getCommision() + "\r\n");
+		fileWrite.write(room.hotelName +"~"+ room.hotelType +"~"+ room.confirmationNumber +"~"+ room.roomNumber +"~"+ room.roomType +"~"+ room.bookingDays +"~"+ room.amenities +"~"+ room.view + "~" + (double)room.roomPrice + "~" + room.customerName + "~" + room.customerAddress + "~" + room.customerCreditCard  +"~"+ room.getCommision() + "\r\n");
 		}
 	bufferedWriter.close();
    }
