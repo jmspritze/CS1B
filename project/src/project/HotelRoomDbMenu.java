@@ -15,14 +15,14 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			do{
 			   System.out.println();
 			   System.out.println();
-			   System.out.printf("Welcome to the CS1B Hotel Reservation System");
+			   System.out.println("Welcome to the CS1B Hotel Reservation System");
 			   System.out.println("Choose an item from the menu:");
 			   System.out.println();
-			   System.out.println("1. View Hotel Guest Listings");
-			   System.out.println("2. View Casino Guest Listings");
-			   System.out.println("3. View Motel Guest Listings");
-			   System.out.println("4. Make a Reservation");
-			   System.out.println("5. Cancel a Reservation");
+			   System.out.println("1. Guest CheckIn");
+			   System.out.println("2. Guest Check Out");
+			   System.out.println("3. View Guest Listings");
+			   System.out.println("4. View Total Booking Revenue");
+			   System.out.println("5. View Total Commissions");
 			   System.out.println("6. Quit ");
 			    BufferedReader br = null;
 			    String data = null;
@@ -39,7 +39,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 		    switch(menuNumber){
 
-			    case 1 : printHotelGuest();
+			    case 1 : printGuestInfo();
 			        break;
 
 			    case 2 : printCasinoGuest();
@@ -54,6 +54,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			    case 5: cancelReservation();
 			    	break;
 			    	
+			    	
 			    case 6 : quit();
 			    	break;
 
@@ -63,31 +64,92 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 	}
 	
+	void printGuestInfo(){
+		int menuNumber2 = 0;
+		   System.out.println("Choose Guest List to view:");
+		   System.out.println();
+		   System.out.println("1. View Hotel Guest Listings");
+		   System.out.println("2. View Casino Guest Listings");
+		   System.out.println("3. View Motel Guest Listings");
+		   System.out.println("4. View All Guest Listings");
+	
+		try {   
+		      BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+		      System.out.println("Enter You Choice:");
+		      String data = br.readLine ( );
+		      menuNumber2 = Integer.parseInt (data);
+		      }  
+		catch ( IOException e)  {
+		  e.printStackTrace ();
+		  } 
+
+	    switch(menuNumber2){
+
+		    case 1 : printHotelGuest();
+		        break;
+
+		    case 2 : printCasinoGuest();
+		        break;
+
+		    case 3 : printMotelGuest();
+		        break;
+		        
+		    case 4: printAllGuest();
+	        break;	        
+	    }
+		 
+	 }
+	
 	void printHotelGuest(){
+		String title = "Hotel Guests";
+		System.out.format("%40s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.println("Hotel" + "\t\t" + "Guest Name" + "\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
+		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
-		Integer key = entry.getKey();
 		HotelRoom room = entry.getValue();
 		if(room.getHotelType().equals("hotel"))
-		System.out.println( room.getHotelName() + ", " + room.getCustomerName());
+		System.out.format(room.hotelName + "\t" + room.customerName + "\t" + room.customerAddress + "\t\t" + room.customerCreditCard+"\n");
 		}
 		 
 	 }
 	void printCasinoGuest(){
+		String title = "Casino Guests";
+		System.out.format("%40s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.println("Casino" + "\t\t" + "Guest Name" + "\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
+		System.out.println();
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
-		Integer key = entry.getKey();
 		HotelRoom room = entry.getValue();
 		if(room.getHotelType().equals("casino"))
-		System.out.println( room.getHotelName() + ", " + room.getCustomerName());
-		}
-	 }
-	void printMotelGuest(){
-		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
-		Integer key = entry.getKey();
-		HotelRoom room = entry.getValue();
-		if(room.getHotelType().equals("motel"))
-		System.out.println( room.getHotelName() + ", " + room.getCustomerName());
+		System.out.format(room.hotelName + "\t" + room.customerName + "\t" + room.customerAddress + "\t\t" + room.customerCreditCard+"\n");
 		}
 		 
+	 }
+	void printMotelGuest(){
+		String title = "Motel Guests";
+		System.out.format("%40s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.println("Motel" + "\t\t" + "Guest Name" + "\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
+		System.out.println();
+		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
+		HotelRoom room = entry.getValue();
+		if(room.getHotelType().equals("motel"))
+		System.out.format(room.hotelName + "\t" + room.customerName + "\t" + room.customerAddress + "\t\t" + room.customerCreditCard+"\n");
+		}	 
+	 }
+	
+	void printAllGuest(){
+		String title = "All Guests";
+		System.out.format("%40s\n",title);
+		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.println("Accomidationd" + "\t\t" + "Guest Name" + "\t\t\t" + "Address" + "\t\t\t\t" + "Credit Card Number" );
+		System.out.println();
+		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
+		HotelRoom room = entry.getValue();
+		//if(room.getHotelType().equals("motel"))
+		System.out.format(room.hotelName + "\t\t" + room.customerName + "\t\t" + room.customerAddress + "\t\t" + room.customerCreditCard+"\n");
+		}	 
 	 }
 	
 

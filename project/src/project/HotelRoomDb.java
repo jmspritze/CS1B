@@ -15,7 +15,8 @@ import java.util.TreeMap;
  */
 
 public class HotelRoomDb {
-	private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
+	private static String dataFileName = "C:\\Users\\T3600\\Documents\\Github\\CS1B\\guestList.txt";
+	//private static String dataFileName = "C:\\Users\\John\\Desktop\\java\\CS1B\\guestList.txt"; 
 	//private static String dataFileName = "//Users//antoinevo//Desktop//guestList.txt"; 
     private String line = null;
     private String[] dataIn= null;
@@ -46,8 +47,7 @@ public class HotelRoomDb {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) { 
-              dataIn = line.split(",");
-
+              dataIn = line.split("~");
               hotelName = dataIn[0];
               hotelType = dataIn[1]; 
               confirmation = Integer.parseInt(dataIn[2]);
@@ -89,6 +89,22 @@ public class HotelRoomDb {
                      numberOfBeds,
                      amenities,
                      view,
+                     roomPrice,
+                     customerName,
+                     customerAddress,
+                     customerCreditCard,
+                     confirmation,
+                     bookingDays,
+                     commision);
+            		    Tmap.put(confirmation,hotelroom);
+              }
+              
+              if(hotelType.equals("motel")){ 
+                  HotelRoom hotelroom  = new Motel(hotelName,
+                     hotelType, 
+                     roomNumber,
+                     roomType,
+                     numberOfBeds,
                      roomPrice,
                      customerName,
                      customerAddress,

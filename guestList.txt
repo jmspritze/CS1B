@@ -1,11 +1,11 @@
-MGM,casino,78923,111,double,2,none,yes,7,200.00,John MGM,123 main st,losaltos ca 94040,12345,20.00
-Luxor,casino,65790,222,double,2,none,yes,7,200.00,John Luxor,123 main st,losaltos ca 94040,1234,20.00
-ParisLasVegas,casino,12428,333,double,2,none,yes,7,200.00,John Paris,123 main st,losaltos ca 94040,1234,20.00
-Venitian,casino,1234,52444,double,2,none,yes,7,200.00,John Veni,123 main st,losaltos ca 94040,12345,20.00
-Bellagio,casino,12345,57595,double,2,none,yes,7,200.00,John Bella,123 main st,losaltos ca 94040,1234,20.00
-BestWestern,hotel,13746,100,double,2,none,yes,7,200.00,John Best,123 main st,losaltos ca 94040,1234,20.00
-CrownPlaza,hotel,24657,200,double,2,none,yes,7,200.00,John Crown,123 main st,losaltos ca 94040,1234,20.00
-Hilton,hotel,71238,300,double,2,none,yes,7,200.00,John Hilton,123 main st,losaltos ca 94040,1234,20.00
-HolidayInn,hotel,34459,400,double,2,none,yes,7,200.00,John Holidy,123 main st,losaltos ca 94040,1234,20.00
-Motel6,motel,24510,500,double,2,none,yes,7,200.00,John Six,123 main st,losaltosca94040,12345,20.00
-Super8,motel,12711,600,double,2,none,yes,7,200.00,John Super,123 main st,losaltosca94040,12345,20.00
+MGM Casino~casino~78923~111~double~2~none~yes~7~200.00~John Smith~1st Los Altos, CA 94040 ~373712345600012~20.00
+Luxor Casino~casino~65790~222~double~2~none~yes~7~200.00~David Martinez~123 Main st,losaltos MT 59801 ~897117234560001~20.00
+ParisLasVegas~casino~12428~333~double~2~none~yes~7~200.00~Mary Metzer~Robbles,losaltos NY 35268~443772347607012~20.00
+Venitian~casino~1234~52444~double~2~none~yes~7~200.00~Donnel Smith~111 El Camio,losaltos WI 17892 ~697117234565601~20.00
+Bellagio~casino~12345~57595~double~2~none~yes~7~200.00~Kelly Cobiea~197 First st,losaltos AK 23367 ~373712789607012~20.00
+BestWestern~hotel~13746~100~double~2~none~yes~7~200.00~Marus Kelly~13 Second st,losaltos HI 48596 ~117117234563091~10.00
+CrownPlaza~hotel~24657~200~double~2~none~yes~7~200.00~Debra Alsup~23 Third st,losaltos WA 65887 ~173716745670012~10.00
+HiltonInns~hotel~71238~300~double~2~none~yes~7~200.00~John Hilton~12 Forth st,losaltos RI  54545 ~777117234560401~10.00
+HolidayInn~hotel~34459~400~double~2~none~yes~7~200.00~Billy Holiday~14 Fifth st,losaltos FL 10114 ~377812345656012~10.00
+Motel6 Motel~motel~24510~500~double~2~none~yes~7~200.00~Scott Admunsun~1235 Six st,losaltos WY 94777 ~669711734560001~2.00
+Super8 Motel~motel~12711~600~single~2~none~yes~7~200.00~Elon Musk~127 Seventh,losaltos ID 87992 ~373812345640412~2.00
