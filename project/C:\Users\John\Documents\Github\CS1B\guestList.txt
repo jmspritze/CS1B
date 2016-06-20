@@ -1,1 +1,13 @@
-HolidayInn~hotel~43294~0~null~5~no~no~0.0~antoine~10950~30.0
+Venitian~casino~1234~54~double~7~no~no~220.0~Donnell Smith~111 El Camio,losaltos WI 17892~697117234565601~.12
+Bellagio~casino~12345~55~double~7~no~no~180.0~Kelly Cobiea~197 First st,losaltos AK 23367~373712789607012~.13
+ParisLasVegas~casino~12428~333~double~7~no~no~200.0~Mary Metzer~Robbles,losaltos NY 35268~443772347607012~.12
+Super8 Motel~motel~12711~600~single~7~no~no~90.0~Elon Musk~127 Seventh,losaltos ID 87992~373812345640412~0.0
+BestWestern~hotel~13746~100~double~7~no~no~140.0~Marus Kelly~13 Second st,losaltos HI 48596~117117234563091~.10
+BestWestern~hotel~20103~0~null~2~no~no~0.0~Jane Smith~345 main, los gatos, ca 94567~123456789123456~.10
+Motel6 Motel~motel~24510~500~double~7~no~no~160.0~Scott Admunsun~1235 Six st,losaltos WY 94777~669711734560001~0.0
+CrownPlaza~hotel~24657~200~double~7~no~no~200.0~Debra Alsup~23 Third st,losaltos WA 65887~173716745670012~.12
+HolidayInn~hotel~34459~400~double~7~no~no~190.0~Billy Holiday~14 Fifth st,losaltos FL 10114~377812345656012~.12
+BestWestern~hotel~52757~0~null~3~no~no~0.0~John Smith~123 main t. los gatos, ca 91111~1234567891234567~0.10
+Luxor Casino~casino~65790~222~double~7~no~no~200.0~David Martinez~123 Main st,losaltos MT 59801~897117234560001~.12
+HiltonInns~hotel~71238~300~double~7~no~no~220.0~John Hilton~12 Forth st,losaltos RI  54545~777117234560401~.12
+MGM Casino~casino~78923~111~double~7~no~no~200.0~John Smith~eEasy St. Los Altos, CA 94040~373712345600012~.15

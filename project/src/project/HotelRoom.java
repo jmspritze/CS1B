@@ -129,6 +129,7 @@ public abstract class HotelRoom {
 	}
 
 	public double commission() {
+		System.out.println("$ 0.00");
 		return 0.0;
 	}
 

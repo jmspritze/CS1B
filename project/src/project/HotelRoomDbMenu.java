@@ -8,7 +8,6 @@ import java.util.Random;
 
 public class HotelRoomDbMenu extends HotelRoomDb {
 	
-    HotelRoom roomCheckIn = new HotelReservation();
     
 	public void initMenu(){
 			int menuNumber = 0;
@@ -39,7 +38,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 		    switch(menuNumber){
 
-			    case 1 : guestCheckIn();
+			    case 1 :pickHotelType();
 			        break;
 
 			    case 2 : guestCheckOut();
@@ -71,9 +70,10 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
 			HotelRoom room = entry.getValue();
 			if(room.getHotelType().equals("hotel") || room.getHotelType().equals("casino"))
-				System.out.println("working"); // test
 				revenue += room.commission();
 		}
+		System.out.println();
+		System.out.println("Total Revenue Earned: $ " + revenue);
 		
 		
 	}
@@ -84,44 +84,6 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		
 	}
 
-	private void guestCheckIn() {
-
-		   pickHotelType();
-		   System.out.println();
-		   pickRoomType();
-
-		// Creates entry in guestlist.txt
-			BufferedReader br = null;
-			Random rand = new Random();
-
-			try {   
-				      br = new BufferedReader (new InputStreamReader (System.in));
-					  System.out.println("Please enter the guest's name: ");
-					  roomCheckIn.setCustomerName(br.readLine());
-					  System.out.println("Please enter the guest's address: ");
-					  roomCheckIn.setCustomerAddress(br.readLine());
-				      System.out.println("How many days will the guest be staying?");
-				      roomCheckIn.setBookingDays(Integer.parseInt(br.readLine()));
-				      System.out.println("Please enter the guests creditcard number");
-				      roomCheckIn.setCustomerCreditCard(Long.parseLong(br.readLine()));
-				      int generatedConfirmationNumber =  rand.nextInt(89999)+10000; // generate random int from 10000-99999
-				      roomCheckIn.setConfirmationNumber(generatedConfirmationNumber);
-				      System.out.println("Check in complete. The guest's confirmation number is: " + generatedConfirmationNumber);
-				    	  
-			      }  
-			catch ( IOException e)  {
-				  e.printStackTrace ();
-				  }
-			
-			Tmap.put(roomCheckIn.getConfirmationNumber(),roomCheckIn);
-			writeDataBase();
-		}
-		
-
-	private void pickRoomType() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	private void pickHotelType() {
 		int menuNumber2 = 0;
@@ -158,6 +120,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 
 
 	private void printMotel() {
+	    HotelRoom roomCheckIn = new Motel();
 		int menuNumber = 0;
 		   System.out.println("The available Motels are:");
 		   System.out.println("1. Motel 6");
@@ -175,19 +138,26 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		    switch(menuNumber){
 
 		    case 1 : 
+		    	 System.out.println("You picked Motel 6");
 		    	roomCheckIn.setHotelType("motel");
 		    	roomCheckIn.setHotelName("Motel 6");
+				roomCheckIn.CheckIn();
 		        break;
 
 		    case 2 : 
+		    	 System.out.println("You picked Motel 8");
 		    	roomCheckIn.setHotelType("motel");
 		    	roomCheckIn.setHotelName("Motel 8");
+		    	roomCheckIn.CheckIn();
 		        break;
    
-	    }
+	       }
+		  Tmap.put(roomCheckIn.getConfirmationNumber(),roomCheckIn);
+		  writeDataBase();
 	}
 
 	private void printCasino() {
+	    HotelRoom roomCheckIn = new CasinoHotel();
 		int menuNumber = 0;
 		   System.out.println("The available Casinos are:");
 		   System.out.println("1. MGM Casino");
@@ -209,39 +179,47 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		    switch(menuNumber){
 
 		    case 1 :
-		    	 System.out.println("You pciked MGM Casino");
+		    	 System.out.println("You picked MGM Casino");
 		    	roomCheckIn.setHotelType("casino");
 		    	roomCheckIn.setHotelName("MGM Casino");
+		    	roomCheckIn.CheckIn();
 		        break;
 
 		    case 2 : 		
 		    	System.out.println("You picked Luxor Casino");
 		    	roomCheckIn.setHotelType("casino");
 	    	    roomCheckIn.setHotelName("Luxor Casino");
+	    	    roomCheckIn.CheckIn();
 		        break;
 
 		    case 3 : 
 		    	System.out.println("You picked Paris Las Vegas");
 		    	roomCheckIn.setHotelType("casino");
 		    	roomCheckIn.setHotelName("ParisLasVegas");
+		    	roomCheckIn.CheckIn();
 		        break;
 		        
 		    case 4: 
 		    	System.out.println("You picked Venitian");
 		    	roomCheckIn.setHotelType("casino");
 		    	roomCheckIn.setHotelName("Venitian");
+		    	roomCheckIn.CheckIn();
 	        break;
 	        
 		    case 5:
 		    	System.out.println("You picked Bellagio");
 		    	roomCheckIn.setHotelType("casino");
 		    	roomCheckIn.setHotelName("Bellagio");
+		    	roomCheckIn.CheckIn();
 	        break;	  
 	    }
+		    Tmap.put(roomCheckIn.getConfirmationNumber(),roomCheckIn);
+		    writeDataBase();
 		
 	}
 
 	private void printHotel() {
+		HotelRoom roomCheckIn = new Hotel();
 		int menuNumber = 0;
 		   System.out.println("The available hotels are:");
 		   System.out.println("1. Best Western");
@@ -265,26 +243,32 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		    	System.out.println("You picked Best Western");
 		    	roomCheckIn.setHotelType("hotel");
 		    	roomCheckIn.setHotelName("BestWestern");
+		    	roomCheckIn.CheckIn();
 		        break;
 
 		    case 2 : 
 		    	System.out.println("You picked Crown Plaza");
 		    	roomCheckIn.setHotelType("hotel");
 		    	roomCheckIn.setHotelName("CrownPlaza");
+		    	roomCheckIn.CheckIn();
 		        break;
 
 		    case 3 : 
 		    	System.out.println("You picked Hilton Inn");
 		    	roomCheckIn.setHotelType("hotel");
 		    	roomCheckIn.setHotelName("HiltonInns");
+		    	roomCheckIn.CheckIn();
 		        break;
 		        
 		    case 4: 
 		    	 System.out.println("You picked HolidayInn");
 		    	roomCheckIn.setHotelType("hotel");
 		    	roomCheckIn.setHotelName("HolidayInn");
+		    	roomCheckIn.CheckIn();
 	        break;
 		    }
+		    Tmap.put(roomCheckIn.getConfirmationNumber(),roomCheckIn);
+		    writeDataBase();
 		
 	}
 
