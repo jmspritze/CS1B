@@ -35,6 +35,7 @@ public class HotelRoomDb {
     private Integer confirmation;
     private Integer bookingDays;
     private double commision;
+    private double finalBill;
 
     public TreeMap <Integer,HotelRoom> Tmap = new TreeMap<Integer,HotelRoom>();
     	
@@ -61,7 +62,8 @@ public class HotelRoomDb {
               customerName = dataIn[9];
               customerAddress = dataIn[10];
               customerCreditCard = Long.parseLong(dataIn[11]);
-              commision =  Double.parseDouble(dataIn[12]); 
+              finalBill =  Double.parseDouble(dataIn[12]);
+              commision =  Double.parseDouble(dataIn[13]); 
             
               
               //Determine Type and load TreeMap
@@ -131,7 +133,7 @@ void writeDataBase(){
 	    for(Map.Entry<Integer,HotelRoom> entry : Tmap.entrySet()){
 		    HotelRoom room = entry.getValue();
 		    entry.getValue();
-		fileWrite.write(room.hotelName +"~"+ room.hotelType +"~"+ room.confirmationNumber +"~"+ room.roomNumber +"~"+ room.roomType +"~"+ room.bookingDays +"~"+ room.amenities +"~"+ room.view + "~" + (double)room.roomPrice + "~" + room.customerName + "~" + room.customerAddress + "~" + room.customerCreditCard  +"~"+ room.getCommision() + "\r\n");
+		fileWrite.write(room.hotelName +"~"+ room.hotelType +"~"+ room.confirmationNumber +"~"+ room.roomNumber +"~"+ room.roomType +"~"+ room.bookingDays +"~"+ room.amenities +"~"+ room.view + "~" + (double)room.roomPrice + "~" + room.customerName + "~" + room.customerAddress + "~" + room.customerCreditCard  +"~"+ room.getFinalBill() + "~" + room.getCommision() + "\r\n");
 		}
 	bufferedWriter.close();
    }

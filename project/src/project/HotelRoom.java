@@ -5,7 +5,6 @@ public abstract class HotelRoom {
     protected String hotelType;
     protected String roomType;
 	protected int roomNumber;
-	protected int numberOfBeds;
     protected Integer bookingDays;
 	protected double roomPrice;
 	protected int numGuests;
@@ -14,6 +13,7 @@ public abstract class HotelRoom {
     protected Long customerCreditCard;
     protected Integer confirmationNumber;
     private double commision;
+    private double finalBill; 
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
 	protected String amenities = "no"; //default
 	protected String view = "no"; //default
@@ -40,13 +40,6 @@ public abstract class HotelRoom {
 	}
 
 	
-	public Integer getNumberofBeds(){
-		return numberOfBeds;
-	}
-
-    public void setNumberOfBeds(Integer numOfBeds){
-    	this.numberOfBeds = numOfBeds;
-    }
     public String getHotelName() {
 		return hotelName;
 	}
@@ -132,6 +125,14 @@ public abstract class HotelRoom {
 		return 0.0;
 	}
 
+
+	public double getFinalBill() {
+		return finalBill;
+	}
+
+	public void setFinalBill(double finalBill) {
+		this.finalBill = finalBill;
+	}
 
 		
 	
