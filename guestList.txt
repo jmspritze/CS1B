@@ -1,11 +1,11 @@
-Venitian~casino~1234~54~double~7~100.0~yes~300.0~Donnell Smith~111 El Camio, Oshkosh, WI 17892~697117234565601~0.0~10.0
-Bellagio~casino~12345~55~double~7~75.0~yes~200.0~Kelly Cobiea~197 First st, Temple, AK 23367~373712789607012~0.0~10.0
-ParisLasVegas~casino~12428~333~double~7~225.0~yes~400.0~Mary Metzer~Robbles Rd, Rome, NY 35268~443772347607012~0.0~10.0
-Super8 Motel~motel~12711~600~single~7~0.0~no~68.0~Elon Musk~127 Seventh, Boise, ID 87992~373812345640412~0.0~10.0
-BestWestern~hotel~13746~100~double~7~0.0~no~86.0~Marus Kelly~13 Second st, Hilo, HI 48596~117117234563091~0.0~10.0
-Motel6 Motel~motel~24510~500~double~7~0.0~no~86.0~Scott Admunsun~1235 Six st, Casper, WY 94777~669711734560001~0.0~10.0
-CrownPlaza~hotel~24657~200~double~7~22.0~no~150.0~Debra Alsup~23 Third st, Seatle, WA 65887~173716745670012~0.0~10.0
-HolidayInn~hotel~34459~400~double~7~0.0~no~100.0~Billy Holiday~14 Fifth st, Miami, FL 10114~377812345656012~0.0~10.0
-Luxor Casino~casino~65790~222~double~7~10.0~no~220.0~David Martinez~123 Main st, Missoula, MT 59801~897117234560001~0.0~10.0
-HiltonInns~hotel~71238~300~double~7~0.0~no~180.0~John Hilton~12 Forth st, Provo, UT  54545~777117234560401~0.0~10.0
-MGM Casino~casino~78923~111~double~7~25.0~no~150.0~John Smith~eEasy St, Los Altos, CA 94040~373712345600012~0.0~10.0
+Venitian~casino~1234~54~double~7~0.0~no~300.0~Donnell Smith~111 El Camio, Oshkosh, WI 17892~697117234565601~2100.0~10.00
+Bellagio~casino~12345~55~double~7~0.0~no~200.0~Kelly Cobiea~197 First st, Temple, AK 23367~373712789607012~1400.0~10.00
+ParisLasVegas~casino~12428~333~double~7~0.0~no~400.0~Mary Metzer~Robbles Rd, Rome, NY 35268~443772347607012~2800.0~10.00
+Super8 Motel~motel~12711~600~single~7~0.0~no~68.0~Elon Musk~127 Seventh, Boise, ID 87992~373812345640412~476.0~10.00
+BestWestern~hotel~13746~100~double~7~0.0~no~86.0~Marus Kelly~13 Second st, Hilo, HI 48596~117117234563091~602.0~10.00
+Motel6 Motel~motel~24510~500~double~7~0.0~no~86.0~Scott Admunsun~1235 Six st, Casper, WY 94777~669711734560001~602.0~12.04
+CrownPlaza~hotel~24657~200~double~7~0.0~no~150.0~Debra Alsup~23 Third st, Seatle, WA 65887~173716745670012~1050.0~10.00
+HolidayInn~hotel~34459~400~double~7~0.0~no~100.0~Billy Holiday~14 Fifth st, Miami, FL 10114~377812345656012~700.0~10.00
+Luxor Casino~casino~65790~222~double~7~0.0~no~220.0~David Martinez~123 Main st, Missoula, MT 59801~897117234560001~1540.0~10.00
+HiltonInns~hotel~71238~300~double~7~0.0~no~180.0~John Hilton~12 Forth st, Provo, UT  54545~777117234560401~1260.0~10.00
+MGM Casino~casino~78923~111~double~7~0.0~no~150.0~John Smith~eEasy St, Los Altos, CA 94040~373712345600012~1050.0~10.00
