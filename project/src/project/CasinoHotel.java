@@ -17,7 +17,7 @@ public class CasinoHotel extends HotelRoom implements CommissionAble{
 	
 	private double roomPrice;
     private String RoomType;;
-    private String amenities;
+    private double amenities;
     private String view;	    
 	  //Constructor for DataBase objects
 	CasinoHotel(){}
@@ -83,6 +83,7 @@ public class CasinoHotel extends HotelRoom implements CommissionAble{
 
 	@Override
 	void Checkout() {
+	
 		}
 
 	@Override

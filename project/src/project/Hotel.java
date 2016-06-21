@@ -10,7 +10,7 @@ public class Hotel extends HotelRoom implements CommissionAble {
 	
 	private double roomPrice;
     private String RoomType;;
-    private String amenities;
+    private double amenities;
     private String view = "no";
    
   //Constructor for DataBase objects something

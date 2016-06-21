@@ -15,7 +15,7 @@ public abstract class HotelRoom {
     private double commision;
     private double finalBill; 
 	protected boolean available; //Checks the room if its Free, false if not, true if it is. 
-	protected String amenities = "no"; //default
+	protected double amenities = 0.0; //default
 	protected String view = "no"; //default
 	
 
@@ -121,16 +121,26 @@ public abstract class HotelRoom {
 		// TO DO
 	}
 
+	public double getAmenities() {
+		return amenities;
+	}
+
+	public void setAmenities(double amenities) {
+		this.amenities = amenities;
+	}
+
 	public double commission() {
 		return 0.0;
 	}
 
 
 	public double getFinalBill() {
-		return finalBill;
+		double bill = this.getRoomPrice() * this.getBookingDays() + this.getAmenities();
+		return bill;
 	}
 
 	public void setFinalBill(double finalBill) {
+
 		this.finalBill = finalBill;
 	}
 

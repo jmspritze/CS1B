@@ -26,7 +26,7 @@ public class HotelRoomDb {
     private String hotelType;
     private Integer roomNumber;
     private String roomType;
-    private String amenities;
+    private double amenities;
     private String view;
     private double roomPrice;
     private String customerName;
@@ -56,7 +56,7 @@ public class HotelRoomDb {
               roomNumber = Integer.parseInt(dataIn[3]);
               roomType= dataIn[4];  
               bookingDays = Integer.parseInt(dataIn[5]);
-              amenities= dataIn[6];
+              amenities= Double.parseDouble(dataIn[6]);
               view = dataIn[7];
               roomPrice =  Double.parseDouble(dataIn[8]);
               customerName = dataIn[9];

@@ -84,12 +84,23 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("Please enter your confirmation number to check out");
 			int confirmNumber = Integer.parseInt(br.readLine());
-			String hotelName = Tmap.get(confirmNumber).hotelName;
-			String customerName = Tmap.get(confirmNumber).customerName;
-			System.out.println();
-			System.out.println("Thank you, " + customerName + " for staying at " + hotelName + "!");
-			System.out.println("We hope to see you again.");
-			Tmap.remove(confirmNumber);
+			String hotelType = Tmap.get(confirmNumber).hotelType;
+			switch(hotelType) {
+		    	case "motel":
+			    	HotelRoom room = Tmap.get(confirmNumber);
+				    room.Checkout();	
+				    String hotelName = Tmap.get(confirmNumber).hotelName;
+		   	        String customerName = Tmap.get(confirmNumber).customerName;
+	    		    System.out.println();
+				    System.out.println("Thank you, " + customerName + " for staying at " + hotelName + "!");
+					System.out.println("We hope to see you again.");
+					Tmap.remove(confirmNumber);
+					break;
+	    		case "hotel" :
+		    		break;
+			    case "casino":
+				    break;
+			}
 			
 		}
 		catch (IOException e){
