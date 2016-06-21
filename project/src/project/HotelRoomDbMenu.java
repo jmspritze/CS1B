@@ -87,20 +87,40 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			String hotelType = Tmap.get(confirmNumber).hotelType;
 			switch(hotelType) {
 		    	case "motel":
-			    	HotelRoom room = Tmap.get(confirmNumber);
-				    room.Checkout();	
-				    String hotelName = Tmap.get(confirmNumber).hotelName;
-		   	        String customerName = Tmap.get(confirmNumber).customerName;
+			    	HotelRoom motelroom = Tmap.get(confirmNumber);
+				    motelroom.Checkout();	
+				    String motelName = Tmap.get(confirmNumber).hotelName;
+		   	        String motelcustomer = Tmap.get(confirmNumber).customerName;
 	    		    System.out.println();
-				    System.out.println("Thank you, " + customerName + " for staying at " + hotelName + "!");
+				    System.out.println("Thank you, " + motelcustomer + " for staying at " + motelName + "!");
 					System.out.println("We hope to see you again.");
 					//Tmap.remove(confirmNumber);
 					writeDataBase();
 					break;
+					
 	    		case "hotel" :
-		    		break;
+	    			HotelRoom hotelroom = Tmap.get(confirmNumber);
+				    hotelroom.Checkout();	
+				    String hotelName = Tmap.get(confirmNumber).hotelName;
+		   	        String hotelcustomer = Tmap.get(confirmNumber).customerName;
+	    		    System.out.println();
+				    System.out.println("Thank you, " + hotelcustomer + " for staying at " + hotelName + "!");
+					System.out.println("We hope to see you again.");
+					//Tmap.remove(confirmNumber);
+					writeDataBase();
+					break;
+		    
 			    case "casino":
-				    break;
+			    	HotelRoom casinoroom = Tmap.get(confirmNumber);
+				    casinoroom.Checkout();	
+				    String casinoName = Tmap.get(confirmNumber).hotelName;
+		   	        String casinocustomer = Tmap.get(confirmNumber).customerName;
+	    		    System.out.println();
+				    System.out.println("Thank you, " + casinocustomer + " for staying at " + casinoName + "!");
+					System.out.println("We hope to see you again.");
+					//Tmap.remove(confirmNumber);
+					writeDataBase();
+					break;
 			}
 			
 		}
