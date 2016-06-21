@@ -21,7 +21,7 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 			   System.out.println("1. Guest Check In");
 			   System.out.println("2. Guest Check Out");
 			   System.out.println("3. View Guest Listings");
-			   System.out.println("4. View Total Commissions and Revenue");
+			   System.out.println("4. View Total Commissions and Revenue Report");
 			   System.out.println("5. Quit ");
 			    BufferedReader br = null;
 			    String data = null;
@@ -94,7 +94,8 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 	    		    System.out.println();
 				    System.out.println("Thank you, " + customerName + " for staying at " + hotelName + "!");
 					System.out.println("We hope to see you again.");
-					Tmap.remove(confirmNumber);
+					//Tmap.remove(confirmNumber);
+					writeDataBase();
 					break;
 	    		case "hotel" :
 		    		break;

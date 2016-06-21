@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class Motel extends HotelRoom {
+public class Motel extends HotelRoom implements CommissionAble{
 	
 	private double roomPrice;
     private String RoomType;
@@ -64,11 +64,11 @@ void Checkout() {
 	   System.out.println("\t\t\t\tMotel Check Out Menu");
 	   System.out.printf("---------------------------------------------------------------------------------------------");
        System.out.println();
-       System.out.println(this.getCustomerName() + " stayed " + this.getBookingDays() + " at a daily rate of " + this.getRoomPrice());
+       System.out.println(this.getCustomerName() + " stayed " + this.getBookingDays() + " at a daily rate of $" + this.getRoomPrice());
        System.out.println();
        System.out.println("The total stay for this visit is $"  + this.getFinalBill());
-	    
-	
+	   this.commission();
+	   
 	/*Creates entry in guestlist.txt
 		BufferedReader br = null;
 		Random rand = new Random();
@@ -117,6 +117,18 @@ void Checkout() {
 */
 	
 }
+@Override
+public double commission() {
+	
+	double result = 0.0; 
+	result = this.getFinalBill()* 0.02; // 2% commision on motels
+	System.out.print("Earned $");
+	System.out.printf( "%.2f",result );
+	 System.out.println(" from " + getHotelName());	
+	 this.setCommision(result);
+	return result;
+}
+
 
 @Override
 void CancelReservation() {
