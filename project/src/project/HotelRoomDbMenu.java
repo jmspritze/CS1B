@@ -75,12 +75,26 @@ public class HotelRoomDbMenu extends HotelRoomDb {
 		System.out.println();
 		System.out.println("Total Revenue Earned: $ " + revenue);
 		
-		
 	}
 
 
 	private void guestCheckOut() {
-		// TODO Auto-generated method stub
+		
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Please enter your confirmation number to check out");
+			int confirmNumber = Integer.parseInt(br.readLine());
+			String hotelName = Tmap.get(confirmNumber).hotelName;
+			String customerName = Tmap.get(confirmNumber).customerName;
+			System.out.println();
+			System.out.println("Thank you, " + customerName + " for staying at " + hotelName + "!");
+			System.out.println("We hope to see you again.");
+			Tmap.remove(confirmNumber);
+			
+		}
+		catch (IOException e){
+			e.printStackTrace();
+		}
 		
 	}
 

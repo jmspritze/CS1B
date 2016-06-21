@@ -3,6 +3,7 @@ package project;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Map;
 import java.util.Random;
 
 public class CasinoHotel extends HotelRoom implements CommissionAble{
@@ -44,8 +45,7 @@ public class CasinoHotel extends HotelRoom implements CommissionAble{
 
 	@Override
 	void Checkout() {
-		// TODO Auto-generated method stub	
-	}
+		}
 
 	@Override
 	void CancelReservation() {

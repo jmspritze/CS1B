@@ -51,7 +51,7 @@ void Checkout() {
 
 @Override
 void CancelReservation() {
-	// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub	
 }
 
 
